@@ -1,0 +1,55 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+}
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+    background: #333;
+}
+
+li ul {
+    display: none;
+}
+ul li a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+}
+ul li > ul{
+    color: black;
+}
+ul li a:hover { 
+    background: #474747; 
+}
+li:hover > ul {
+    display: block;
+    position: absolute;
+    min-width: 200px;
+}
+li:hover li {
+    float: none; 
+}
+li ul li {
+    border-top: 0; 
+    background: #F3F3F3;
+}
+li ul li a {
+    color:black;
+}
+li ul li a:hover {
+    background:white;
+}
+ul ul ul {
+    margin-left: 100%;
+    top: 0;
+}
+ul::after {
+    content:"";
+    clear: both;
+    display: table; 
+}
